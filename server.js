@@ -10,6 +10,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Endpoint cho Login
+
+app.get("", (req, res) => {
+  return res.status(200).json({ mes: "ok" });
+});
+
 app.get("/auth/user/login", (req, res) => {
   return res.status(200).json({
     status: 200,
